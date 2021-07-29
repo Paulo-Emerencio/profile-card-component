@@ -1,0 +1,13 @@
+@use '../util' as *;
+
+main {
+   @include flex-center;
+   height: 100vh;
+   background-image:
+      url("../images/bg-pattern-top.svg"),
+      url("../images/bg-pattern-bottom.svg");
+   background-size: 100vh;
+   background-position:
+      bottom 50vh right 50vw, top 50vh left 50vw;
+   background-repeat: no-repeat;
+}
