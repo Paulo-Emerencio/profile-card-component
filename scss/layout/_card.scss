@@ -11,3 +11,27 @@ main {
       bottom 50vh right 50vw, top 50vh left 50vw;
    background-repeat: no-repeat;
 }
+
+.card {
+   width: 87vw;
+   max-width: 350px;
+   background-color: $card-color;
+   border-radius: 15px;
+   overflow: hidden;
+
+   &-header {
+      position: relative;
+      height: 140px;
+      background-image: url("../images/bg-pattern-card.svg");
+
+      &-avatar {
+         position: absolute;
+         left: 50%;
+         bottom: 0;
+         transform: translate(-50%, 50%);
+         background-color: $card-color;
+         padding: 5px;
+         @include img-round;
+      }
+   }
+}

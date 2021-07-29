@@ -22,4 +22,29 @@ main {
   background-repeat: no-repeat;
 }
 
+.card {
+  width: 87vw;
+  max-width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card-header {
+  position: relative;
+  height: 140px;
+  background-image: url("../images/bg-pattern-card.svg");
+}
+.card-header-avatar {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+.card-header-avatar img {
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=main.css.map */
