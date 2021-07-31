@@ -1,17 +1,5 @@
 @use '../util' as *;
 
-main {
-   @include flex-center;
-   height: 100vh;
-   background-image:
-      url("../images/bg-pattern-top.svg"),
-      url("../images/bg-pattern-bottom.svg");
-   background-size: 100vh;
-   background-position:
-      bottom 50vh right 50vw, top 50vh left 50vw;
-   background-repeat: no-repeat;
-}
-
 .card {
    width: 87vw;
    max-width: 350px;
@@ -31,7 +19,27 @@ main {
          transform: translate(-50%, 50%);
          background-color: $card-color;
          padding: 5px;
-         @include img-round;
       }
+      &-avatar, img {
+         border-radius: 50%;
+      }
+   }
+
+   &-body {
+      text-align: center;
+      padding: 75px 0 25px 0;
+      border-bottom: 1px solid $line-color;
+
+      &-name {
+         font-size: 1em;
+         color: $heading-color;
+         margin-bottom: 10px;
+      }
+      &-city, .age {
+         font-weight: 400;
+         color: $subtitle-color;
+      }
+      .age { margin-left: 5px; }
+      &-city { font-size: .8em; }
    }
 }
