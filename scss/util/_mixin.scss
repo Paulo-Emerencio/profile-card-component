@@ -12,7 +12,7 @@
 }
 
 @mixin responsive($property, $size) {
-   @media ($property: $size) {
+   @media (#{$property}: $size) {
       @content
    }
 }
