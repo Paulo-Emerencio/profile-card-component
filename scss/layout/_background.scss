@@ -2,7 +2,7 @@
 
 main {
    @include flex-center;
-   height: 100vh;
+   min-height: 100vh;
    background-color: $primary-color;
    background-image:
       url("../images/bg-pattern-top.svg"),
@@ -11,4 +11,10 @@ main {
    background-position:
       bottom 50vh right 50vw, top 50vh left 50vw;
    background-repeat: no-repeat;
+
+   @include responsive(min-width, 740px) {
+      background-size: auto;
+      background-position:
+         bottom 37vh right 51vw, top 50vh left 49vw;
+   }
 }

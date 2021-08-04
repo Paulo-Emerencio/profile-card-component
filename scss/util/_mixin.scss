@@ -1,5 +1,18 @@
+@use 'var' as *;
+
 @mixin flex-center {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+@mixin name-stats-style {
+   font-size: 1em;
+   color: $heading-color;
+}
+
+@mixin responsive($property, $size) {
+   @media ($property: $size) {
+      @content
+   }
 }

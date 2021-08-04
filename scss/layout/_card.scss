@@ -6,6 +6,7 @@
    background-color: $card-color;
    border-radius: 15px;
    overflow: hidden;
+   box-shadow: 0 20px 60px 10px rgba($heading-color, 0.3);
 
    &-header {
       position: relative;
@@ -31,15 +32,37 @@
       border-bottom: 1px solid $line-color;
 
       &-name {
-         font-size: 1em;
-         color: $heading-color;
-         margin-bottom: 10px;
+         @include name-stats-style;
+         display: inline-block;
+         margin: 0 5px 10px 0;
       }
-      &-city, .age {
+      &-age {
          font-weight: 400;
          color: $subtitle-color;
       }
-      .age { margin-left: 5px; }
-      &-city { font-size: .8em; }
+      &-city {
+         @extend .card-body-age; // &-age
+         font-size: .8em;
+      }
+   }
+
+   &-footer {
+      &-list {
+         height: 88px;
+         @include flex-center;
+         justify-content: space-evenly;
+         text-align: center;
+
+         .stats-number {
+            @include name-stats-style;
+            margin-bottom: 8px;
+         }
+         .stats-name {
+            font-size: .6em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: $paragraph-color;
+         }
+      }
    }
 }
