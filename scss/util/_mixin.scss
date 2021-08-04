@@ -10,9 +10,3 @@
    font-size: 1em;
    color: $heading-color;
 }
-
-@mixin responsive($property, $size) {
-   @media (#{$property}: $size) {
-      @content
-   }
-}

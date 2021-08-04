@@ -10,7 +10,7 @@
    a, a:active { color: blue;}
    a:hover { text-decoration: underline; }
 
-   @include responsive(max-height, 447px) {
+   @media (max-height: 447px) {
       display: none;
    }
 }

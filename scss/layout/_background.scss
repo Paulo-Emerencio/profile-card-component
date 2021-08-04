@@ -12,7 +12,7 @@ main {
       bottom 50vh right 50vw, top 50vh left 50vw;
    background-repeat: no-repeat;
 
-   @include responsive(min-width, 740px) {
+   @media (min-width: 740px) {
       background-size: auto;
       background-position:
          bottom 37vh right 51vw, top 50vh left 49vw;
